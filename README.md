@@ -1,10 +1,10 @@
 # dashboard
 
-A new Flutter project.
+Flutter business dashboard app for windows, with a potential to incorporate mobile app functionality.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is being developed and shared only for learning purposes.
 
 A few resources to get you started if this is your first Flutter project:
 
