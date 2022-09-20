@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'components/side_menu.dart';
+
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
 
@@ -9,36 +11,12 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
+          // ignore: prefer_const_constructors
           Expanded(
             //Menu column.
             //Default flex here is 1 and it will take 1/6 of the screen.
-            child: Column(
-              children: [
-                DrawerHeader(
-                  child: Image.asset("assets/images/icons8-menu-64.png"),
-                ),
-                DrawerListTile(
-                  title: "Customers",
-                  svgSrc: "assets/icons/users-svgrepo-com.svg",
-                  press: () {},
-                ),
-                DrawerListTile(
-                  title: "Schedule",
-                  svgSrc: "assets/icons/calendar.svg",
-                  press: () {},
-                ),
-                DrawerListTile(
-                  title: "Income",
-                  svgSrc: "assets/icons/money.svg",
-                  press: () {},
-                ),
-                DrawerListTile(
-                  title: "Spendings",
-                  svgSrc: "assets/icons/money.svg",
-                  press: () {},
-                ),
-              ],
-            ),
+            // ignore: prefer_const_constructors
+            child: SideMenu(),
           ),
           Expanded(
             flex: 5,
