@@ -1,5 +1,5 @@
 import 'package:dashboard/screens/constants.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:dashboard/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
