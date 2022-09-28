@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors, duplicate_ignore
+
+import 'package:dashboard/screens/dashboard/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -10,6 +13,7 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Row(
+        // ignore: prefer_const_literals_to_create_immutables
         children: [
           // ignore: prefer_const_constructors
           Expanded(
@@ -20,9 +24,7 @@ class MainScreen extends StatelessWidget {
           ),
           Expanded(
             flex: 5,
-            child: Container(
-              color: Colors.blue,
-            ),
+            child: DashboardScreen(),
           ),
         ],
       ),
