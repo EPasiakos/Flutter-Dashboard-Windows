@@ -1,9 +1,18 @@
+import 'dart:io';
+
 import 'package:dashboard/screens/constants.dart';
 import 'package:dashboard/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:window_size/window_size.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
+    setWindowTitle('My App');
+    setWindowMinSize(const Size(1280, 720));
+  }
   runApp(const MyApp());
 }
 
