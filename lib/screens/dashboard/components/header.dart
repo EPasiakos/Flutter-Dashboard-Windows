@@ -51,7 +51,10 @@ class ProfileCard extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
             child: Text("User Name placeholder"),
           ),
-          const Icon(Icons.keyboard_arrow_down),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Icon(Icons.keyboard_arrow_down),
+          ),
         ],
       ),
     );

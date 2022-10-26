@@ -24,12 +24,40 @@ class DashboardScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
-                  flex: 5,
-                  child: Container(
-                    height: 500,
-                    color: Colors.white,
-                  ),
-                ),
+                    flex: 6,
+                    child: Column(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            border: Border(
+                              top: BorderSide(
+                                  width: 2,
+                                  color: primaryColor.withOpacity(0.15)),
+                            ),
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Pelatologio",
+                                style: Theme.of(context).textTheme.subtitle1,
+                              ),
+                              ElevatedButton.icon(
+                                style: TextButton.styleFrom(
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: defaultPadding * 1.5,
+                                    vertical: defaultPadding,
+                                  ),
+                                ),
+                                onPressed: () {},
+                                icon: Icon(Icons.add),
+                                label: Text("Add new"),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    )),
                 SizedBox(
                   width: defaultPadding,
                 ),
