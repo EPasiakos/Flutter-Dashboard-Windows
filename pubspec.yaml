@@ -72,6 +72,8 @@ flutter:
     - assets/icons/calendar.svg
     - assets/icons/money.svg
     - assets/icons/search.svg
+    - assets/icons/user-optimized.svg
+    - assets/images/profile.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

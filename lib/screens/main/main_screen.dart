@@ -12,21 +12,22 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        // ignore: prefer_const_literals_to_create_immutables
-        children: [
-          // ignore: prefer_const_constructors
-          Expanded(
-            //Menu column.
-            //Default flex here is 1 and it will take 1/6 of the screen.
-            // ignore: prefer_const_constructors
-            child: SideMenu(),
-          ),
-          Expanded(
-            flex: 5,
-            child: DashboardScreen(),
-          ),
-        ],
+      body: SafeArea(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Expanded(
+              //Menu column.
+              //Default flex here is 1 and it will take 1/6 of the screen.
+              // ignore: prefer_const_constructors
+              child: SideMenu(),
+            ),
+            Expanded(
+              flex: 5,
+              child: DashboardScreen(),
+            ),
+          ],
+        ),
       ),
     );
   }
