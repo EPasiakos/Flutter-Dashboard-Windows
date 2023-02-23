@@ -44,6 +44,7 @@ dependencies:
   flutter_svg: ^0.22.0
   fl_chart: ^0.55.2
   provider: ^5.0.0
+  sqflite: ^2.2.4+1
 
 dev_dependencies:
   flutter_test:

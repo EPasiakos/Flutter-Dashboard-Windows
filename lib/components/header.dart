@@ -1,4 +1,5 @@
-import 'package:dashboard/screens/constants.dart';
+import 'package:dashboard/controllers/constants.dart';
+import 'package:dashboard/screens/main/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -11,12 +12,22 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(
-          "Dashboard",
-          style: Theme.of(context).textTheme.headline6,
+        TextButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const MainScreen(),
+              ),
+            );
+          },
+          child: Text(
+            "Dashboard",
+            style: Theme.of(context).textTheme.headline6,
+          ),
         ),
         const Spacer(flex: 2),
-        const Expanded(child: SearchField()),
+        //const Expanded(child: SearchField()),
         const ProfileCard()
       ],
     );

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
+import '../../../controllers/constants.dart';
 import 'chart.dart';
 import 'info_card.dart';
 

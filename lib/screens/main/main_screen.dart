@@ -4,7 +4,7 @@ import 'package:dashboard/screens/dashboard/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'components/side_menu.dart';
+import '../../components/side_menu.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});

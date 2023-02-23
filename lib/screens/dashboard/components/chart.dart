@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
+import '../../../controllers/constants.dart';
 
 class Chart extends StatelessWidget {
   const Chart({
@@ -26,7 +26,7 @@ class Chart extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: defaultPadding,
                 ),
                 Text(
