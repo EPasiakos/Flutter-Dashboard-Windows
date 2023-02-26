@@ -2,7 +2,6 @@
 
 import 'package:dashboard/controllers/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:dashboard/dbHelper/customers.dart';
 import '../../components/header.dart';
 import 'components/statistics.dart';
 
@@ -13,6 +12,7 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: SingleChildScrollView(
+        primary: false,
         padding: EdgeInsets.all(defaultPadding),
         child: Column(
           children: [

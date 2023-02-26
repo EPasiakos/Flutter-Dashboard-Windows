@@ -1,8 +1,9 @@
 import 'dart:io';
-import 'package:dashboard/dbHelper/customers.dart';
+import 'package:dashboard/dbHelper/customers_page.dart';
 import 'package:dashboard/screens/finance/finance.dart';
 import 'package:dashboard/controllers/constants.dart';
 import 'package:dashboard/screens/main/main_screen.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:window_size/window_size.dart';
@@ -39,6 +40,15 @@ class MyApp extends StatelessWidget {
         Provider.of<NavigationController>(context);
 
     return MaterialApp(
+      // Settings to enable windows desktop support for scrolling.
+      scrollBehavior: const MaterialScrollBehavior().copyWith(
+        dragDevices: {
+          PointerDeviceKind.mouse,
+          PointerDeviceKind.touch,
+          PointerDeviceKind.stylus,
+          PointerDeviceKind.unknown
+        },
+      ),
       debugShowCheckedModeBanner: false,
       title: 'Dashboard',
       theme: ThemeData.dark().copyWith(
@@ -52,8 +62,8 @@ class MyApp extends StatelessWidget {
           const MaterialPage(child: MainScreen()),
           if (navigation.screenName == '/Schedule')
             const MaterialPage(child: Schedule()),
-          if (navigation.screenName == '/Customers')
-            const MaterialPage(child: Customers()),
+          if (navigation.screenName == '/Customers page')
+            const MaterialPage(child: CustomersPage()),
           if (navigation.screenName == '/Finance')
             const MaterialPage(child: Finance()),
         ],
