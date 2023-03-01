@@ -51,7 +51,7 @@ class InfoCard extends StatelessWidget {
                     "$numOfFiles seconds",
                     style: Theme.of(context)
                         .textTheme
-                        .caption!
+                        .bodySmall!
                         .copyWith(color: Colors.white70),
                   ),
                 ],

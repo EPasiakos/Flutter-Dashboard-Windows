@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:dashboard/controllers/constants.dart';
+import 'package:dashboard/screens/dashboard/components/graph.dart';
 import 'package:flutter/material.dart';
 import '../../components/header.dart';
 import 'components/statistics.dart';
@@ -35,23 +36,32 @@ class DashboardScreen extends StatelessWidget {
                                 color: primaryColor.withOpacity(0.15)),
                           ),
                         ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        child: Column(
                           children: [
-                            Text(
-                              "Pelatologio",
-                              style: Theme.of(context).textTheme.subtitle1,
-                            ),
-                            ElevatedButton.icon(
-                              style: TextButton.styleFrom(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: defaultPadding * 1.5,
-                                  vertical: defaultPadding,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Insights",
+                                  style:
+                                      Theme.of(context).textTheme.titleMedium,
                                 ),
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0),
+                              child: LineChartSample2(),
+                            ),
+                            Container(
+                              height: 400,
+                              decoration: BoxDecoration(
+                                border: Border(
+                                  top: BorderSide(
+                                      width: 2,
+                                      color: primaryColor.withOpacity(0.15)),
+                                ),
+                                color: secondaryColor,
                               ),
-                              onPressed: () {},
-                              icon: Icon(Icons.add),
-                              label: Text("Add new"),
                             ),
                           ],
                         ),

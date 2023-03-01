@@ -23,7 +23,7 @@ class Header extends StatelessWidget {
           },
           child: Text(
             "Dashboard",
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
         const Spacer(flex: 2),
