@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:dashboard/controllers/constants.dart';
+import 'package:dashboard/screens/dashboard/components/ads_monthly_graph.dart';
 import 'package:dashboard/screens/dashboard/components/graph.dart';
 import 'package:flutter/material.dart';
 import '../../components/header.dart';
@@ -38,31 +39,31 @@ class DashboardScreen extends StatelessWidget {
                         ),
                         child: Column(
                           children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "Insights",
-                                  style:
-                                      Theme.of(context).textTheme.titleMedium,
-                                ),
-                              ],
-                            ),
                             Padding(
-                              padding: const EdgeInsets.only(top: 8.0),
-                              child: LineChartSample2(),
-                            ),
-                            Container(
-                              height: 400,
-                              decoration: BoxDecoration(
-                                border: Border(
-                                  top: BorderSide(
-                                      width: 2,
-                                      color: primaryColor.withOpacity(0.15)),
-                                ),
-                                color: secondaryColor,
+                              padding: const EdgeInsets.only(left: 12.0),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    "Insights",
+                                    style:
+                                        Theme.of(context).textTheme.titleMedium,
+                                  ),
+                                ],
                               ),
                             ),
+                            IncomeChart(),
+                            AdsMonthlyChart(),
+                            // Container(
+                            //   height: 400,
+                            //   decoration: BoxDecoration(
+                            //     border: Border(
+                            //       top: BorderSide(
+                            //           width: 2,
+                            //           color: primaryColor.withOpacity(0.15)),
+                            //     ),
+                            //     color: secondaryColor,
+                            //   ),
+                            // ),
                           ],
                         ),
                       ),

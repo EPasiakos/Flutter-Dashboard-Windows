@@ -3,14 +3,14 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class IncomeChart extends StatefulWidget {
-  const IncomeChart({super.key});
+class AdsMonthlyChart extends StatefulWidget {
+  const AdsMonthlyChart({super.key});
 
   @override
-  State<IncomeChart> createState() => _IncomeChartState();
+  State<AdsMonthlyChart> createState() => _AdsMonthlyChartState();
 }
 
-class _IncomeChartState extends State<IncomeChart> {
+class _AdsMonthlyChartState extends State<AdsMonthlyChart> {
   List<Color> gradientColors = [
     AppColors.contentColorCyan,
     AppColors.contentColorBlue,
@@ -39,7 +39,7 @@ class _IncomeChartState extends State<IncomeChart> {
         const Padding(
           padding: EdgeInsets.only(left: 12.0),
           child: Text(
-            'Total income per month',
+            'Total ads per month',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -142,34 +142,40 @@ class _IncomeChartState extends State<IncomeChart> {
     String text;
     switch (value.toInt()) {
       case 1:
-        text = '£1000';
+        text = '10';
         break;
       case 2:
-        text = '£2000';
+        text = '20';
         break;
       case 3:
-        text = '£3000';
+        text = '30';
         break;
       case 4:
-        text = '£4000';
+        text = '40';
         break;
       case 5:
-        text = '£5000';
+        text = '50';
         break;
       case 6:
-        text = '£6000';
+        text = '60';
         break;
       case 7:
-        text = '£7000';
+        text = '70';
         break;
       case 8:
-        text = '£8000';
+        text = '80';
         break;
       case 9:
-        text = '£9000';
+        text = '90';
         break;
       case 10:
-        text = '£10000';
+        text = '100';
+        break;
+      case 11:
+        text = '110';
+        break;
+      case 12:
+        text = '120';
         break;
       default:
         return Container();
@@ -230,23 +236,23 @@ class _IncomeChartState extends State<IncomeChart> {
       minX: 0,
       maxX: 11,
       minY: 0,
-      maxY: 10,
+      maxY: 12,
       lineBarsData: [
         LineChartBarData(
           spots: const [
-            FlSpot(0, 3),
-            FlSpot(1, 2),
-            FlSpot(3, 4.232),
-            FlSpot(4, 3.1),
-            FlSpot(5, 4.2),
-            FlSpot(6, 3.5),
-            FlSpot(7, 4.1),
-            FlSpot(8, 3.5),
-            FlSpot(9, 4.1),
-            FlSpot(10, 3.5),
-            FlSpot(11, 4.1),
+            FlSpot(0, 6),
+            FlSpot(1, 7),
+            FlSpot(3, 8),
+            FlSpot(4, 7),
+            FlSpot(5, 7.6),
+            FlSpot(6, 8),
+            FlSpot(7, 8.5),
+            FlSpot(8, 7),
+            FlSpot(9, 8),
+            FlSpot(10, 9),
+            FlSpot(11, 9),
           ],
-          isCurved: false,
+          isCurved: true,
           gradient: LinearGradient(
             colors: gradientColors,
           ),
